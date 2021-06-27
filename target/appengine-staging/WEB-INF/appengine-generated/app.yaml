@@ -1,0 +1,45 @@
+runtime: java8
+inbound_services:
+- warmup
+derived_file_type:
+- java_precompiled
+threadsafe: True
+auto_id_policy: default
+beta_settings:
+  'source_reference': 'https://github.com/NguSa1/GoogleJavaSwagger.git#97f85617dfa59b06cb045875f1ea28a2e5c74d8d'
+api_version: 'user_defined'
+handlers:
+- url: (/.*)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: /
+  script: unused
+  login: optional
+  secure: optional
+- url: /_ah/.*
+  script: unused
+  login: optional
+  secure: optional
+- url: /hello
+  script: unused
+  login: optional
+  secure: optional
+- url: /api
+  script: unused
+  login: optional
+  secure: optional
+- url: .*\.jsp
+  script: unused
+  login: optional
+  secure: optional
+- url: /.*/
+  script: unused
+  login: optional
+  secure: optional
+- url: /api/.*
+  script: unused
+  login: optional
+  secure: optional

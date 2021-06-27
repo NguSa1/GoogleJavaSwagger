@@ -18,6 +18,7 @@
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
     <archiveClasses>true</archiveClasses>
     <appengine.sdk.version>1.9.89</appengine.sdk.version>
+    <java8>true</java8>
     <jersey2-version>2.6</jersey2-version>
     <swagger-version>2.1.9</swagger-version>
   </properties>
@@ -61,12 +62,6 @@
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-server</artifactId>
       <version>${jersey2-version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>jakarta.activation</groupId>
-          <artifactId>jakarta.activation-api</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <!--    -->
     <dependency>
@@ -145,7 +140,10 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.2.0</version>
         <configuration>
+          <deploy.version>1-0</deploy.version>
+          <deploy.projectId>sampleswaggerjava</deploy.projectId>
         </configuration>
+
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
