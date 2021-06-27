@@ -1,4 +1,4 @@
-This is a sample maven java restful api web app using jersey and swagger. It is hosted GCP AppEngine. Its for practise purposes for myself, but you can use it as reference for your own App. If you have access to your own google cloud account you can just modify the appengine-web.xml.
+This is a sample maven java restful api web app using jersey and swagger. It is hosted on GCP AppEngine. Its for practise purposes for myself, but you can use it as reference for your own App. If you have access to your own google cloud account you can just modify the appengine-web.xml.
 
 Features will be:
 =================
