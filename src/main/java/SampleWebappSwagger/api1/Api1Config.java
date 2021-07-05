@@ -17,7 +17,7 @@ import javax.ws.rs.core.Application;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@ApplicationPath("/resources/api")
+//@ApplicationPath("/resources/api")
 public class Api1Config extends ResourceConfig {
 
     public Api1Config() {

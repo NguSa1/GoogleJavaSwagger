@@ -14,10 +14,6 @@
       <param-name>javax.ws.rs.Application</param-name>
       <param-value>SampleWebappSwagger.api1.Api1Config</param-value>
     </init-param>
-    <init-param>
-      <param-name>javax.ws.rs.ApplicationPath</param-name>
-      <param-value>/api1</param-value>
-    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
@@ -31,10 +27,6 @@
     <init-param>
       <param-name>javax.ws.rs.Application</param-name>
       <param-value>SampleWebappSwagger.api1.Api1Config</param-value>
-    </init-param>
-    <init-param>
-      <param-name>javax.ws.rs.ApplicationPath</param-name>
-      <param-value>/api2</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -59,6 +51,14 @@
       </param-value>
     </init-param>
     <init-param>
+      <param-name>swagger.use.path.based.config</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>swagger.api.basepath</param-name>
+      <param-value>/api1</param-value>
+    </init-param>
+    <init-param>
       <param-name>openApi.configuration.alwaysResolveAppPath</param-name>
       <param-value>true</param-value>
     </init-param>
@@ -73,4 +73,5 @@
     <servlet-name>jersey</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
+
 </web-app>
