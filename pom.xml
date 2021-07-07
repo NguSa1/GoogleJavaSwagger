@@ -21,6 +21,7 @@
     <java8>true</java8>
     <jersey2-version>2.6</jersey2-version>
     <swagger-version>2.1.9</swagger-version>
+    <app.id>sampleswaggerjava</app.id>
   </properties>
 
   <prerequisites>
@@ -159,7 +160,23 @@
         <version>2.2.0</version>
         <configuration>
           <deploy.version>1-0</deploy.version>
-          <deploy.projectId>sampleswaggerjava</deploy.projectId>
+          <deploy.projectId>${app.id}</deploy.projectId>
+          <devserver.jvmFlags>
+            <devserver.jvmFlag>-Xdebug</devserver.jvmFlag>
+            <devserver.jvmFlag>-DappId=${app.id}</devserver.jvmFlag>
+            <devserver.jvmFlag>-Dtask_queue.disable_auto_task_execution=false</devserver.jvmFlag>
+          </devserver.jvmFlags>
+          <devserver.environment>
+            <GOOGLE_APPLICATION_CREDENTIALS>
+            </GOOGLE_APPLICATION_CREDENTIALS>
+          </devserver.environment>
+          <devserver.port>8081</devserver.port> <!-- Default module's port-->
+          <devserver.host>0.0.0.0</devserver.host>
+          <devserver.services><!-- Default module is defined first -->
+            <devserver.service>
+              ${project.basedir}/target/sample-web-app-swagger-1.0-SNAPSHOT
+            </devserver.service>
+          </devserver.services>
         </configuration>
 
       </plugin>

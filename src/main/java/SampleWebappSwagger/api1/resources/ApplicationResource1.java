@@ -5,6 +5,7 @@ package SampleWebappSwagger.api1.resources;
 //import io.swagger.v3.oas.annotations.responses.ApiResponse;
 //import io.swagger.v3.oas.annotations.servers.Server;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.servers.Server;
 import io.swagger.v3.oas.annotations.servers.ServerVariable;
 
@@ -22,6 +23,7 @@ public class ApplicationResource1 {
 // @GET is request method annotator
     @GET
     @Path("/dino1")
+    @Operation(tags = "test1")
     public Response sayHi() {
         return Response.status(Response.Status.OK)
                 .entity("Hello World")

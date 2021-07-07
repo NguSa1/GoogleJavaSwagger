@@ -3,6 +3,7 @@ package SampleWebappSwagger.api2.resources;
 
 //import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.servers.Server;
 import io.swagger.v3.oas.annotations.servers.ServerVariable;
 
@@ -22,6 +23,7 @@ public class ApplicationResource2 {
     // @GET is request method annotator
     @GET
     @Path("/dino2")
+    @Operation(tags = "test2")
     public Response sayHi() {
         return Response.status(Response.Status.OK)
                 .entity("Hello World 2")
