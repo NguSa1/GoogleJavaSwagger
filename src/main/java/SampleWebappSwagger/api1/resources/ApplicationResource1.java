@@ -1,9 +1,5 @@
 package SampleWebappSwagger.api1.resources;
 
-//import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-//import io.swagger.v3.oas.annotations.Parameter;
-//import io.swagger.v3.oas.annotations.responses.ApiResponse;
-//import io.swagger.v3.oas.annotations.servers.Server;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.servers.Server;
